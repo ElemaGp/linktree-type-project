@@ -4,8 +4,10 @@ import Header from "../../components/header/Header"
 
 const Home = () => {
   return (
-    <div className="homeContainer">
-        <Header />
+    <div className="home">
+        <div className="homeContainer">
+            <Header />
+        </div>
     </div>
   )
 }
