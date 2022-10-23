@@ -1,0 +1,23 @@
+.item{
+    display: block;
+    background: #EAECF0;
+    text-align: center;
+    padding: 24px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 24px;
+    
+}
+
+p{
+    font-size: x-small;
+    margin-top: 4px;
+}
+
+.icons{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 37px;
+}

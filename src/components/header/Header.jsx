@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <div className="header">
       <img id="profile__img" src={me} alt="profile pic" />
-      <span>@ikechhi</span>
-      <span className="slackName">G. I Elema</span>
+      <span id="twitter">@ikechhi</span>
+      <span id="slack">G. I Elema</span>
     </div>
   )
 }
