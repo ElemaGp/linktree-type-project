@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    width: 70rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    border-top: solid 1px #6670851e;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 113px;
+}
+
+.footer > span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #667085;
+}
