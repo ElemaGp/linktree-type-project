@@ -5,8 +5,10 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>
+    <div className="header">
       <img id="profile__img" src={me} alt="profile pic" />
+      <span>@ikechhi</span>
+      <span className="slackName">G. I Elema</span>
     </div>
   )
 }
