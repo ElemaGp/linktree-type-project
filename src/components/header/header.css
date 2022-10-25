@@ -22,3 +22,10 @@
 #slack{
     visibility: hidden;
 }
+
+.shareIcon{
+    position: absolute;
+    top: 44px;
+    right: 352px;
+    cursor: pointer;
+}
