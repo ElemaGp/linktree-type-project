@@ -21,3 +21,12 @@ p{
     justify-content: center;
     gap: 37px;
 }
+
+
+/*============== MEDIA QUERIES (MEDIUM DEVICES) ie. tablets ============= */
+@media screen and (max-width: 1024px) {
+    .icons {
+        display: none;
+
+    }
+}

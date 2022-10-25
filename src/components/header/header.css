@@ -4,6 +4,21 @@
     align-items: center;
 }
 
+.shareIcon{
+    position: absolute;
+    top: 44px;
+    right: 352px;
+    cursor: pointer;
+}
+
+.moreIcon{
+    display: none;
+    position: absolute;
+    top: 44px;
+    right: 150px;
+    cursor: pointer;
+}
+
 #profile__img{
     width: 88px;
     height: 88px;
@@ -23,9 +38,16 @@
     visibility: hidden;
 }
 
-.shareIcon{
-    position: absolute;
-    top: 44px;
-    right: 352px;
-    cursor: pointer;
+
+
+
+/*============== MEDIA QUERIES (MEDIUM DEVICES) ie. tablets ============= */
+@media screen and (max-width: 1024px) {
+    .shareIcon {
+        display: none;
+    }
+
+    .moreIcon{
+        display: flex;
+    }
 }
