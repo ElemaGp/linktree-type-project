@@ -3,3 +3,14 @@
     margin-right: 144px;
     margin-top: 64px;
 }
+
+
+/*============== MEDIA QUERIES (SMALLER DEVICES) ie. phones ============= */
+@media screen and (max-width: 375px) {
+    
+    .homeContainer{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+}
