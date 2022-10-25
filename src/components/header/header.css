@@ -52,11 +52,12 @@
     }
 }
 
-/*============== MEDIA QUERIES (SMALLER DEVICES) ie. phones ============= */
-@media screen and (max-width: 375px) {
+/*============== MEDIA QUERIES (SMALL DEVICES) ie. phones ============= */
+@media screen and (max-width: 600px) {
     
     .moreIcon{
         right: 16px;
     }
 
 }
+

@@ -5,12 +5,23 @@
 }
 
 
+/*============== MEDIA QUERIES (MEDIUM DEVICES) ie. tablets ============= */
+@media screen and (max-width: 1024px) {
+    .homeContainer {
+        margin-left: 30px;
+        margin-right: 30px;
+
+    }
+}
+
+
 /*============== MEDIA QUERIES (SMALLER DEVICES) ie. phones ============= */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 600px) {
     
     .homeContainer{
         margin-left: 16px;
         margin-right: 16px;
+
     }
 
 }
