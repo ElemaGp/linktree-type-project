@@ -31,3 +31,13 @@
 
     }
 }
+
+/*============== MEDIA QUERIES (SMALLER DEVICES) ie. phones ============= */
+@media screen and (max-width: 600px) {
+    
+    .footer{
+        width: 88vw;
+
+    }
+
+}
