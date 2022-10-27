@@ -21,7 +21,13 @@
 /*============== MEDIA QUERIES (MEDIUM DEVICES) ie. tablets ============= */
 @media screen and (max-width: 1024px) {
     .footer {
-        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 93vw;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 16px;
+        gap: 16px;
 
     }
 }

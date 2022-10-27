@@ -23,11 +23,6 @@ p{
 }
 
 
-/*============== MEDIA QUERIES (MEDIUM DEVICES) ie. tablets ============= */
-@media screen and (max-width: 1024px) {
-    .icons {
-        display: none;
 
-    }
-}
+
 

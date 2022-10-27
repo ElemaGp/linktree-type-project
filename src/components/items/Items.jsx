@@ -17,7 +17,7 @@ const Items = () => {
       <a href="https://books.zuri.team/design-rules" id="book__design" target="_blank" className="item">Design Books</a>
 
       <div className="icons">
-        <a href= "" target="_blank"> <img src={slack} alt="slack icon" /> </a>
+        <a href= "https://hng9.slack.com/team/U048AUGBW4T" target="_blank"> <img src={slack} alt="slack icon" /> </a>
         <a href="https://github.com/ElemaGp" target="_blank"> <img src={github} alt="github icon" /> </a>
       </div>
     </div>
