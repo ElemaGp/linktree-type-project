@@ -1,3 +1,79 @@
+.contact{ 
+    margin-top: 156px;
+    margin-left: 360px;
+    margin-right: 360px;
+    margin-bottom: 190px;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #101828;
+    margin-bottom: 20px;
+}
+
+p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #475467;
+    margin-bottom: 48px;
+}
+
+.describer{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #344054;
+}
+
+.names{
+    display: flex;
+
+    gap: 12px;
+    
+}
+
+.eachContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 24px;
+}
+
+.names input {
+    width: 18.7rem;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+}
+
+.emailInput{
+    padding: 10px 14px;
+    height: 24px;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+}
+
+textarea{
+    padding: 12px 14px;
+    height: 132px;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    resize: none;
+}
+
 
 
 /* CHECKBOX START*/
@@ -16,7 +92,7 @@ input[type="checkbox"] {
 }
 
 /* CREATING A CUSTOM CHECKBOX */
-.geekmark{
+.checkbox{
     position: absolute;
     top: 0;
     left: 0;
@@ -29,7 +105,7 @@ input[type="checkbox"] {
 }
 
 /* SPECIFY STYLING FOR WHEN CHECKBOX IS FOCUSED (WITH RESPECT TO THE HIDDEN INPUT TAG) */
-    .main input:focus ~ .geekmark {
+    .main input:focus ~ .checkbox {
         background: #FFFFFF;
         border: 1px solid #84CAFF;
         box-shadow: 0px 0px 0px 4px #D1E9FF;
@@ -37,14 +113,14 @@ input[type="checkbox"] {
     }
 
 /* SPECIFY STYLING FOR WHEN CHECKBOX IS CHECKED (WITH RESPECT TO THE HIDDEN INPUT TAG) */
-    .main input:checked ~ .geekmark {
+    .main input:checked ~ .checkbox {
         background: #F9FAFB;
         border: 1px solid #1570EF;
         border-radius: 6px;
     }
 
     /* SPECIFY STYLING FOR WHEN CHECKBOX IS DISABLED (WITH RESPECT TO THE HIDDEN INPUT TAG) */
-    .main input:disabled ~ .geekmark {
+    .main input:disabled ~ .checkbox {
         box-sizing: border-box;
         background: #F2F4F7;
         border: 1px solid #D0D5DD;
@@ -53,20 +129,20 @@ input[type="checkbox"] {
 
 /*CHECKMARK TO BE SHOWN IN CHECKBOX */
 /* It is not to be shown when not checked */
-.geekmark::after {
+.checkbox::after {
     content: "";
     position: absolute;
     display: none;
 }
 
 /* Display checkmark when checked */
-.main input:checked ~ .geekmark::after {
+.main input:checked ~ .checkbox::after {
     display: block;
 }
 
 /* Styling the checkmark using webkit */
 /* Rotated the rectangle by 45 degrees and showing only two borders to make it look like a checkmark */
-.main .geekmark::after {
+.main .checkbox::after {
     position: absolute;
     left: 5px;
     right: 16.67%;
@@ -86,10 +162,6 @@ input[type="checkbox"] {
 
 /*CHECKBOX END*/
 
-textarea{
-    resize: none;
-}
-
 .agreement{
     margin-left: 12px;
     font-style: normal;
@@ -97,4 +169,15 @@ textarea{
     font-size: 16px;
     line-height: 24px;
     color: #475467;
+}
+
+button{
+    width: 100%;
+    margin-top: 32px;
+    background: #1570EF;
+    border: 1px solid #1570EF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    color: white;
+    padding: 12px 20px;
 }

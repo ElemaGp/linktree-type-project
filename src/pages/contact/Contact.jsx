@@ -17,49 +17,58 @@ const Contact = () => {
 
   return (
     <div className="contact">
-            <h2>Contact Me</h2>
+            <h1>Contact Me</h1>
             <p>Hi there, contact me to ask me about anything you have in mind.</p>
             <form>
                 <div className="names">
-                    <label for="first_name">First name</label>
-                    <input
-                    id="first_name"
-                    type="text"
-                    required
-                    placeholder="Enter your first name"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    />
-                    
-                    <label for="last_name">Last name</label>
-                    <input
-                    id="last_name"
-                    type="text"
-                    required
-                    placeholder="Enter your last name"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    />
+                    <div className="eachContainer">
+                        <label for="first_name" className="describer">First name</label>
+                        <input
+                        id="first_name"
+                        type="text"
+                        required
+                        placeholder="Enter your first name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="eachContainer">                   
+                        <label for="last_name" className="describer">Last name</label>
+                        <input
+                        id="last_name"
+                        type="text"
+                        required
+                        placeholder="Enter your last name"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        />
+                    </div>
                 </div>
 
-                <label for="email">Email</label>
-                    <input
-                    id="email"
-                    type="email"
-                    required
-                    placeholder="yourname@email.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    />
+                <div className="eachContainer">
+                    <label for="email" className="describer">Email</label>
+                        <input
+                        id="email"
+                        className="emailInput"
+                        type="email"
+                        required
+                        placeholder="yourname@email.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        />
+                </div>
                 
-                <label for="message">Message</label>
-                <textarea 
-                  id="message"
-                  required
-                  placeholder="Send me a message and I'll reply you as soon as possible..."
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                ></textarea>
+                <div className="eachContainer">
+                    <label for="message" className="describer">Message</label>
+                    <textarea 
+                    id="message"
+                    required
+                    placeholder="Send me a message and I'll reply you as soon as possible..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    ></textarea>
+                </div>
 
                 <label className="main">
                     <input 
@@ -68,12 +77,13 @@ const Contact = () => {
                         checked={isChecked}
                         onChange={handleOnChange} 
                         />
-                        <span className="geekmark"></span>
+                        <span className="checkbox"></span>
                         <span className="agreement">You agree to providing your data to elemaIK who may contact you.</span>
                 </label>
 
                 {!isPending && <button id="btn__submit">Send message</button>}
                 {isPending && <button id="btn__submit" disabled>Sending message...</button>}
+
 
 
             </form>
