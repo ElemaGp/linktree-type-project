@@ -1,0 +1,100 @@
+
+
+/* CHECKBOX START*/
+
+.main{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: max-content;
+}
+
+/* HIDE THE DEFAULT CHECKBOX*/
+input[type="checkbox"] {
+    visibility: hidden;
+    
+}
+
+/* CREATING A CUSTOM CHECKBOX */
+.geekmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    
+}
+
+/* SPECIFY STYLING FOR WHEN CHECKBOX IS FOCUSED (WITH RESPECT TO THE HIDDEN INPUT TAG) */
+    .main input:focus ~ .geekmark {
+        background: #FFFFFF;
+        border: 1px solid #84CAFF;
+        box-shadow: 0px 0px 0px 4px #D1E9FF;
+        border-radius: 6px;
+    }
+
+/* SPECIFY STYLING FOR WHEN CHECKBOX IS CHECKED (WITH RESPECT TO THE HIDDEN INPUT TAG) */
+    .main input:checked ~ .geekmark {
+        background: #F9FAFB;
+        border: 1px solid #1570EF;
+        border-radius: 6px;
+    }
+
+    /* SPECIFY STYLING FOR WHEN CHECKBOX IS DISABLED (WITH RESPECT TO THE HIDDEN INPUT TAG) */
+    .main input:disabled ~ .geekmark {
+        box-sizing: border-box;
+        background: #F2F4F7;
+        border: 1px solid #D0D5DD;
+        border-radius: 6px;
+     }
+
+/*CHECKMARK TO BE SHOWN IN CHECKBOX */
+/* It is not to be shown when not checked */
+.geekmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Display checkmark when checked */
+.main input:checked ~ .geekmark::after {
+    display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degrees and showing only two borders to make it look like a checkmark */
+.main .geekmark::after {
+    position: absolute;
+    left: 5px;
+    right: 16.67%;
+    top: 8%;
+    bottom: 8%;
+    
+    border: 2px solid #1570EF;
+    
+    width: 6px;
+    height: 12px;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*CHECKBOX END*/
+
+textarea{
+    resize: none;
+}
+
+.agreement{
+    margin-left: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #475467;
+}

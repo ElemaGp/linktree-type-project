@@ -1,10 +1,83 @@
 import "./contact.css"
 
-import React from 'react'
+import React, { useState } from 'react'
 
 const Contact = () => {
+
+    const [firstName, setFirstName] = useState ("");
+    const [lastName, setLastName] = useState ("");
+    const [email, setEmail] = useState ("");
+    const [message, setMessage] = useState ("");
+    const [isPending, setIsPending] = useState (false);
+    const [isChecked, setIsChecked] = useState (false);
+
+    const handleOnChange = () => {
+        setIsChecked(!isChecked);
+    };
+
   return (
-    <div>Contact</div>
+    <div className="contact">
+            <h2>Contact Me</h2>
+            <p>Hi there, contact me to ask me about anything you have in mind.</p>
+            <form>
+                <div className="names">
+                    <label for="first_name">First name</label>
+                    <input
+                    id="first_name"
+                    type="text"
+                    required
+                    placeholder="Enter your first name"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    />
+                    
+                    <label for="last_name">Last name</label>
+                    <input
+                    id="last_name"
+                    type="text"
+                    required
+                    placeholder="Enter your last name"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    />
+                </div>
+
+                <label for="email">Email</label>
+                    <input
+                    id="email"
+                    type="email"
+                    required
+                    placeholder="yourname@email.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+                
+                <label for="message">Message</label>
+                <textarea 
+                  id="message"
+                  required
+                  placeholder="Send me a message and I'll reply you as soon as possible..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                ></textarea>
+
+                <label className="main">
+                    <input 
+                        type="checkbox"   
+                        name="checkbox"
+                        checked={isChecked}
+                        onChange={handleOnChange} 
+                        />
+                        <span className="geekmark"></span>
+                        <span className="agreement">You agree to providing your data to elemaIK who may contact you.</span>
+                </label>
+
+                {!isPending && <button id="btn__submit">Send message</button>}
+                {isPending && <button id="btn__submit" disabled>Sending message...</button>}
+
+
+            </form>
+        </div>
   )
 }
 
