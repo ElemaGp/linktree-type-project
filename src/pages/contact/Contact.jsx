@@ -12,21 +12,25 @@ const Contact = () => {
     const [isPending, setIsPending] = useState (false);
     const [isChecked, setIsChecked] = useState (false);
     const [submitMessage, setSubmitMessage] = useState ("");
+    const [error, setError] = useState (false);
 
     const handleOnChange = () => {
         setIsChecked(!isChecked);
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault(); 
+          e.preventDefault();
+          if (firstName.length==0 || lastName.length==0 || email.length==0 || message.length==0){
+            setError(true);
+          }
+          
           setIsPending(true);
-          setSubmitMessage("Message sent!");
+          
+          if (firstName && lastName && email && message ){
+            setSubmitMessage("Message sent!");
+          };
+          
           setIsPending(false);
-          setFirstName("");
-          setLastName("");
-          setEmail("");
-          setMessage("");
-          setIsChecked(false);
       }
 
   return (
@@ -40,24 +44,26 @@ const Contact = () => {
                             <label for="first_name" className="describer">First name</label>
                             <input
                             id="first_name"
-                            type="text"
-                            required
+                            type="text"                           
                             placeholder="Enter your first name"
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
                             />
+                            {error && firstName.length<=0?
+                            <div className="inputFieldErrorText">First name is required</div>:""}
                         </div>
 
                         <div className="eachContainer">                   
                             <label for="last_name" className="describer">Last name</label>
                             <input
                             id="last_name"
-                            type="text"
-                            required
+                            type="text"                           
                             placeholder="Enter your last name"
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
                             />
+                            {error && lastName.length<=0?
+                            <div className="inputFieldErrorText">Last name is required</div>:""}
                         </div>
                     </div>
 
@@ -66,24 +72,27 @@ const Contact = () => {
                             <input
                             id="email"
                             className="emailInput"
-                            type="email"
-                            required
+                            type="email"                           
                             placeholder="yourname@email.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             />
+                            {error && email.length<=0?
+                            <div className="inputFieldErrorText">Email is required</div>:""}
                     </div>
                     
                     <div className="eachContainer">
                         <label for="message" className="describer">Message</label>
                         <textarea 
                         id="message"
-                        required
+                        
                         placeholder="Send me a message and I'll reply you as soon as possible..."
                         value={message}
-                        className="defaultTextArea"
+                        className={error && message.length<=0 ? 'errorTextArea' : "defaultTextArea" } 
                         onChange={(e) => setMessage(e.target.value)}
                         ></textarea>
+                        {error && message.length<=0?
+                        <div className="textAreaErrorText">Please enter a message</div>:""}
                     </div>
 
                     <div className="permission">
