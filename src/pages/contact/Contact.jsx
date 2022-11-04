@@ -27,8 +27,6 @@ const Contact = () => {
           setEmail("");
           setMessage("");
           setIsChecked(false);
-
-
       }
 
   return (
@@ -83,6 +81,7 @@ const Contact = () => {
                         required
                         placeholder="Send me a message and I'll reply you as soon as possible..."
                         value={message}
+                        className="defaultTextArea"
                         onChange={(e) => setMessage(e.target.value)}
                         ></textarea>
                     </div>
