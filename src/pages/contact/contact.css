@@ -47,7 +47,7 @@ p{
 }
 
 .names input {
-    width: 18.7rem;
+    width: 19.3rem;
     height: 44px;
     box-sizing: border-box;
     padding: 10px 14px;
@@ -81,6 +81,9 @@ textarea::placeholder{
     color: #667085;
 }
 
+.permission{
+    display: flex;
+}
 
 
 /* CHECKBOX START*/
@@ -191,4 +194,45 @@ button{
     font-weight: 600;
     font-size: 16px;
     line-height: 24px
+}
+
+
+
+/*============== MEDIA QUERIES (MEDIUM DEVICES) ie. tablets ============= */
+@media screen and (max-width: 1024px) {
+    .contactWrapper {
+        margin-left: 16px;
+        margin-right: 16px;
+       
+    }
+
+    .names input {
+        width: 22rem;
+    }
+
+}
+
+/*============== MEDIA QUERIES (SMALLER DEVICES) ie. phones ============= */
+@media screen and (max-width: 600px) {
+
+    
+    
+    .contactWrapper{
+        margin-top: 64px;
+        width: 20rem;
+    }
+
+    .names {
+        flex-direction: column;
+    }
+
+    .names input {
+        width: inherit;
+    }
+
+    .agreement{
+        width: 17rem;
+    }
+
+    
 }

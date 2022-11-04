@@ -72,16 +72,18 @@ const Contact = () => {
                         ></textarea>
                     </div>
 
-                    <label className="main">
-                        <input 
-                            type="checkbox"   
-                            name="checkbox"
-                            checked={isChecked}
-                            onChange={handleOnChange} 
-                            />
-                            <span className="checkbox"></span>
-                            <span className="agreement">You agree to providing your data to elemaIK who may contact you.</span>
-                    </label>
+                    <div className="permission">
+                        <label className="main">
+                            <input 
+                                type="checkbox"   
+                                name="checkbox"
+                                checked={isChecked}
+                                onChange={handleOnChange} 
+                                />
+                                    <span className="checkbox"></span>
+                        </label>
+                        <span className="agreement">You agree to providing your data to elemaIK who may contact you.</span>
+                    </div>
 
                     {!isPending && <button id="btn__submit">Send message</button>}
                     {isPending && <button id="btn__submit" disabled>Sending message...</button>}
@@ -98,3 +100,4 @@ const Contact = () => {
 }
 
 export default Contact
+                            
