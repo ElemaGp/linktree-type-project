@@ -11,17 +11,32 @@ const Contact = () => {
     const [message, setMessage] = useState ("");
     const [isPending, setIsPending] = useState (false);
     const [isChecked, setIsChecked] = useState (false);
+    const [submitMessage, setSubmitMessage] = useState ("");
 
     const handleOnChange = () => {
         setIsChecked(!isChecked);
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+          setIsPending(true);
+          setSubmitMessage("Message sent!");
+          setIsPending(false);
+          setFirstName("");
+          setLastName("");
+          setEmail("");
+          setMessage("");
+          setIsChecked(false);
+
+
+      }
 
   return (
     <div className="contact">
         <div className="contactWrapper">
                 <h1>Contact Me</h1>
                 <p>Hi there, contact me to ask me about anything you have in mind.</p>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="names">
                         <div className="eachContainer">
                             <label for="first_name" className="describer">First name</label>
@@ -92,7 +107,7 @@ const Contact = () => {
 
                 </form>
 
-                
+                <div className="submitMessage">{submitMessage}</div>
             </div>
             <Footer />
         </div>

@@ -196,6 +196,16 @@ button{
     line-height: 24px
 }
 
+.submitMessage{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    color: rgb(14, 167, 14);
+    margin-top: 7px;
+    text-align: center;
+
+}
 
 
 /*============== MEDIA QUERIES (MEDIUM DEVICES) ie. tablets ============= */
