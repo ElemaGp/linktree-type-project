@@ -41,7 +41,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="names">
                         <div className="eachContainer">
-                            <label for="first_name" className="describer">First name</label>
+                            <label htmlFor="first_name" className="describer">First name</label>
                             <input
                             id="first_name"
                             type="text"                           
@@ -54,7 +54,7 @@ const Contact = () => {
                         </div>
 
                         <div className="eachContainer">                   
-                            <label for="last_name" className="describer">Last name</label>
+                            <label htmlFor="last_name" className="describer">Last name</label>
                             <input
                             id="last_name"
                             type="text"                           
@@ -68,7 +68,7 @@ const Contact = () => {
                     </div>
 
                     <div className="eachContainer">
-                        <label for="email" className="describer">Email</label>
+                        <label htmlFor="email" className="describer">Email</label>
                             <input
                             id="email"
                             className="emailInput"
@@ -82,7 +82,7 @@ const Contact = () => {
                     </div>
                     
                     <div className="eachContainer">
-                        <label for="message" className="describer">Message</label>
+                        <label htmlFor="message" className="describer">Message</label>
                         <textarea 
                         id="message"
                         
