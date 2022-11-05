@@ -33,6 +33,8 @@ const Contact = () => {
           setIsPending(false);
       }
 
+      /*Later, remove this custom "const error" validation, and just use the default validation by making the input fields and textarea "required". */
+
   return (
     <div className="contact">
         <div className="contactWrapper">
